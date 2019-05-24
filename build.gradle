@@ -48,6 +48,12 @@ tasks.withType(GroovyCompile) {
     groovyOptions.forkOptions.jvmArgs.add('-Dgroovy.parameters=true')
 }
 
+test {
+    jacoco {
+        exclude["./src/main/groovy/projet/gl51/Application.groovy"]
+    }
+}
+
 jacocoTestReport {
     reports {
         xml.enabled = true // coveralls plugin depends on xml format report
