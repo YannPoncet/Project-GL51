@@ -50,7 +50,7 @@ tasks.withType(GroovyCompile) {
 
 test {
     jacoco {
-        exclude["./src/main/groovy/projet/gl51/Application.groovy"]
+        excludes["./src/main/groovy/projet/gl51/Application.groovy"]
     }
 }
 
